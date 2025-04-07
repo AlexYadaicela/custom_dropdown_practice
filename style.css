@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+
+ul{
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+li:not(.active):hover{
+    background-color: beige;
+}
+
+.active{
+    background-color: blue;
+}
+
+body{
+    background-color: red;
+    font-size: 1.275rem;
+    min-height: 100dvh;
+}
+
+
+.dropdown{
+    width: 15rem; 
+    background-color: blue;
+    margin-inline: auto;
+}
+
+.dropdown-btn{
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+    font-size: 1.275rem; 
+}
+
+.dropdown-btn::after{
+    height: 1rem;
+    width: 1rem;
+}
+
+.dropdown-btn[data-visible="false"]::after{
+    content: url(./assest/icons/chevron-down-icon.svg); 
+}
+
+.dropdown-btn[data-visible="true"]::after{
+    content: url(./assest/icons/chevron-up-icon.svg);
+}
+
+.dropdown-item{
+    background-color: green;
+    display: flex; 
+    align-items: center;
+}
+
+
+.dropdown-menu{
+    background-color: yellow;
+    overflow: hidden;
+    height: 0;
+}
+
+
+.result-icon{
+    width: 1rem; 
+}
+
+button:hover, li:hover{
+    cursor: pointer;
+}
